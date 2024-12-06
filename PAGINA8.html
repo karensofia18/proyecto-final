@@ -6,7 +6,44 @@
 <link rel="stylesheet" href="Style1.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+html,body,h1,h2,h3,h4,h5 {
+  font-family: "Raleway", sans-serif;
+  background-color: #f5fdf6;
+  color: #444;
+}
+
+/* Estilos del formulario */
+form {
+  background-color: #d6f5e0;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  color: #2d8659;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #0f0f0f;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e6bdb3;
+  border-radius: 5px;
+}
+
+
+
 </style>
 </head>
 <body class="w3-light-grey">
@@ -21,7 +58,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
-      <img src="./IMAGENES/728b603907cad5175f71ebdb670602c3.jpg" class="w3-circle w3-margin-right" style="width:46px">
+      <img src= "./IMAGENES/728b603907cad5175f71ebdb670602c3.jpg" class="w3-circle w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
       <span>BIENVENIDOS</span><br>
@@ -29,7 +66,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <hr>
   <div class="w3-container">
-    <h5>MENÚ</h5>
+    <h5>MENU</h5>
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="Menu"><i class="fa fa-remove fa-fw"></i>&nbsp; Menu</a>
@@ -40,34 +77,36 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="PAGINA5.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bar-chart"></i>PRODUCCIÓN DE ENERGÍA RENOVABLE POR FUENTE</a>
     <a href="PAGINA6.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pie-chart"></i>PARTICIPACIÓN DE ENERGÍA RENOVABLE</a>
     <a href="PAGINA7.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>TENDENCIA EN LA CAPACIDAD INSTALADA</a>
-    <a href="PAGINA8.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-area-chart"></i>ENERGÍA RENOVABLE VS CONVENCIONAL</a>
-    <a href="PAGINA9.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user"></i>CONTÁCTENOS PARA MAYOR INFORMACIÓN</a><br><br>
+    <a href="PAGINA8.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user"></i>CONTÁCTENOS PARA MAYOR INFORMACIÓN</a><br><br>
   </div>
 </nav>
 
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
+<!-- Main content -->
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
-
-  <!-- Header -->
-  <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> Energía Eólica</b></h5>
-  </header>
-
-  <div class="w3-panel">
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-third">
-        <h1>Energía renovable VS Convencional</h1>
-        <p>Este gráfico muestra de manera visual cómo se divide tu consumo energético entre fuentes renovables y convencionales a lo largo del tiempo</p>
-      </div>
-      <div class="w3-twothird">
-      </div>
-    </div>
+  <!-- Content and Stats -->
+  <div class="w3-container">
+          <div class="w3-grey">
+       </div>
+    <!-- Más contenido aquí -->
   </div>
-  
+
+  <!-- Formulario Contáctenos -->
+  <div class="w3-container">
+    <form>
+      <h2>Contáctenos</h2>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required>
+      
+      <label for="celular">Celular:</label>
+      <input type="tel" id="celular" name="celular" required>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
   <br>
   <div class="w3-container w3-dark-grey w3-padding-32">
     <div class="w3-row">
@@ -86,39 +125,15 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
+
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <h4>Talentotech2</h4>
     <p>Powered by <a href="https://www.ucaldas.edu.co/" target="_blank">Universidad de Caldas</a></p>
   </footer>
       
-
-  <!-- End page content -->
-</div>
-
 <script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
+// Scripts de interacción
 </script>
 
 </body>
